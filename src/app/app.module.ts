@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {CoreModule} from "./core/core.module";
 import {RouterModule} from "@angular/router";
+import {HomePageModule} from "./pages/home-page/home-page.module";
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {RouterModule} from "@angular/router";
     BrowserModule,
     CoreModule,
     RouterModule,
+    HomePageModule,
 
   ],
   providers: [],

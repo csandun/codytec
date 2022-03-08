@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PublicComponent } from './public.component';
+import { WriteArticlePageComponent } from './write-article-page.component';
 
-describe('PublicComponent', () => {
-  let component: PublicComponent;
-  let fixture: ComponentFixture<PublicComponent>;
+describe('WriteArticlePageComponent', () => {
+  let component: WriteArticlePageComponent;
+  let fixture: ComponentFixture<WriteArticlePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PublicComponent ]
+      declarations: [ WriteArticlePageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PublicComponent);
+    fixture = TestBed.createComponent(WriteArticlePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
