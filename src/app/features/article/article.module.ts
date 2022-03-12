@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ArticleFeedComponent } from './components/article-feed/article-feed.component';
 import { ArticleListComponent } from './components/article-list/article-list.component';
 import { ArticleListItemComponent } from './components/article-list-item/article-list-item.component';
+import { ArticleFormComponent } from './components/article-form/article-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
+import { ArticleAuthorInfoboxComponent } from './components/article-author-infobox/article-author-infobox.component';
 
 
 
@@ -10,13 +14,19 @@ import { ArticleListItemComponent } from './components/article-list-item/article
   declarations: [
     ArticleFeedComponent,
     ArticleListComponent,
-    ArticleListItemComponent
+    ArticleListItemComponent,
+    ArticleFormComponent,
+    ArticleAuthorInfoboxComponent
   ],
   exports: [
-    ArticleFeedComponent
+    ArticleFeedComponent,
+    ArticleFormComponent,
+    ArticleAuthorInfoboxComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    RouterModule
   ]
 })
 export class ArticleModule { }

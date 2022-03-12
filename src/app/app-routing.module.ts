@@ -19,6 +19,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/article-page/article-page.module').then(m => m.ArticlePageModule)
   },
   {
+    path: 'new-article',
+    loadChildren: () => import('./pages/write-article-page/write-article-page.module').then(m => m.WriteArticlePageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile-page/profile-page.module').then(m => m.ProfilePageModule)
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
