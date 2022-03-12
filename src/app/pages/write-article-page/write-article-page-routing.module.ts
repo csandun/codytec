@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
-import {ArticlePageComponent} from "./article-page.component";
-
+import {WriteArticlePageComponent} from "./write-article-page.component";
 
 
 
 const routes: Routes = [
-  {path: ':slug', component: ArticlePageComponent},
+  {path:'', component: WriteArticlePageComponent}
 ];
 
 
@@ -20,5 +19,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ArticlePageRoutingModule { }
+export class WriteArticlePageRoutingModule { }
 

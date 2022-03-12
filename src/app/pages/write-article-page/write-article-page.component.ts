@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-write-article-page',
   templateUrl: './write-article-page.component.html',
-  styleUrls: ['./write-article-page.component.css']
+  styleUrls: ['./write-article-page.component.scss']
 })
 export class WriteArticlePageComponent implements OnInit {
 

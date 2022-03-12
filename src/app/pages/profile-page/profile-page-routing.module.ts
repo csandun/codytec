@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
-import {ArticlePageComponent} from "./article-page.component";
+import {ProfilePageComponent} from "./profile-page.component";
 
 
 
 
 const routes: Routes = [
-  {path: ':slug', component: ArticlePageComponent},
+  {path: '', component: ProfilePageComponent},
 ];
 
 
@@ -20,5 +20,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ArticlePageRoutingModule { }
+export class ProfilePageRoutingModule { }
 

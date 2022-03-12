@@ -18,12 +18,15 @@ NAVBAR
           <a class="nav-link" routerLink="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/article">Write</a>
+          <a class="nav-link" routerLink="/new-article">Write</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/profile">Profile</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-5 d-flex align-items-end">
         <li class="nav-item highlight">
-          <a class="nav-item" href="#">Sign In</a>
+          <a class="nav-item" (click)="openModal('custom-modal-1')" style="cursor: pointer">Sign In</a>
         </li>
       </ul>
 
@@ -35,4 +38,10 @@ NAVBAR
     </div>
   </div>
 </nav>
+
+<!--<app-modal id="custom-modal-1">-->
+<!--  <h1>A Custom Modal!</h1>-->
+<!--  <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>-->
+<!--  <button (click)="closeModal('custom-modal-1');">Close</button>-->
+<!--</app-modal>-->
 <!-- End Navbar -->
