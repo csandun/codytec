@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArticlePageComponent } from './article-page.component';
+import {ArticlePageRoutingModule} from "./article-page-routing.module";
 
 
 
@@ -9,7 +10,8 @@ import { ArticlePageComponent } from './article-page.component';
     ArticlePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ArticlePageRoutingModule
   ]
 })
 export class ArticlePageModule { }
