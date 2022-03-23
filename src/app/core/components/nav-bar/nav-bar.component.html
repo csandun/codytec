@@ -26,22 +26,27 @@ NAVBAR
       </ul>
       <ul class="navbar-nav ml-5 d-flex align-items-end">
         <li class="nav-item highlight">
-          <a class="nav-item" (click)="openModal('custom-modal-1')" style="cursor: pointer">Sign In</a>
+          <a class="nav-item"   (click)="openModalWithComponent(AuthType.LOGIN)" style="cursor: pointer">Sign In</a>
         </li>
       </ul>
 
       <ul class="navbar-nav ml-3 d-flex align-items-end">
         <li class="nav-item highlight">
-          <a class="nav-item btn btn-primary btn-round text-light btn-sm pr-4 pl-4 shadow-md" href="#">Get Start</a>
+          <a class="nav-item btn btn-primary btn-round text-light btn-sm pr-4 pl-4 shadow-md" (click)="openModalWithComponent(AuthType.REGISTER)">Get Start</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!--<app-modal id="custom-modal-1">-->
-<!--  <h1>A Custom Modal!</h1>-->
-<!--  <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>-->
-<!--  <button (click)="closeModal('custom-modal-1');">Close</button>-->
-<!--</app-modal>-->
-<!-- End Navbar -->
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>

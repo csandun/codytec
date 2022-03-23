@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BsModalRef} from "ngx-bootstrap/modal";
+import {AuthType} from "../../models/auth-type";
 
 @Component({
   selector: 'app-login',
@@ -7,13 +8,12 @@ import {BsModalRef} from "ngx-bootstrap/modal";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  title?: string;
-  closeBtnName?: string;
-  list: any[] = [];
+  type: AuthType = AuthType.LOGIN;
+  AuthType = AuthType;
+
   constructor(public bsModalRef: BsModalRef) { }
 
   ngOnInit(): void {
-    this.list.push('PROFIT!!!');
   }
 
 }

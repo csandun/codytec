@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
 import {AppModalService} from "../../../shared/components/app-modal/app-modal.service";
+import {BsModalService, BsModalRef, ModalOptions} from 'ngx-bootstrap/modal';
+import {LoginComponent} from "../login/login.component";
+import {AuthType} from "../../models/auth-type";
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,22 +11,25 @@ import {AppModalService} from "../../../shared/components/app-modal/app-modal.se
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
-  bodyText: string = '';
-
-  constructor(private modalService: AppModalService) { }
+  AuthType = AuthType;
+  bsModalRef?: BsModalRef;
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
-    this.bodyText = 'This text can be updated in modal 1';
   }
 
-  openModal(id: string) {
-    debugger;
-    this.modalService.open(id);
-  }
+  openModalWithComponent(type: AuthType) {
 
-  closeModal(id: string) {
-    this.modalService.close(id);
+    const initialState: ModalOptions = {
+      class: 'modal-dialog-centered',
+      initialState: {
+        type: type,
+      }
+
+
+
+    };
+    this.bsModalRef = this.modalService.show(LoginComponent, initialState);
   }
 
 }

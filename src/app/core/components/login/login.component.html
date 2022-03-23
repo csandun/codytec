@@ -5,18 +5,21 @@
   <div class="container">
     <div class="row">
       <div class="mt-4 p-5">
-        <h4 class="w-100  justify-content-center">Welcome back.</h4>
+        <h4 class="w-100  justify-content-center">{{type === AuthType.LOGIN ? 'Welcome back.' : 'Join CodyTec.' }}</h4>
         <div class="mt-5 mb-3">
           <a href="#" class="btn btn-outline-primary btn-round btn-sm m-1 w-100"><i class="fa fa-google fa-x"></i>Sign
-            in with Google</a>
+            {{type === AuthType.LOGIN ? 'in' : 'up' }} with Google</a>
           <a href="#" class="btn btn-outline-primary btn-round btn-sm m-1 w-100"><i class="fa fa-google fa-x"></i>Sign
-            in with Facebook</a>
+            {{type === AuthType.LOGIN ? 'in' : 'up' }}  with Facebook</a>
           <a href="#" class="btn btn-outline-primary btn-round btn-sm m-1 w-100"><i class="fa fa-google fa-x"></i>Sign
-            in with Linkedin</a>
+            {{type === AuthType.LOGIN ? 'in' : 'up' }}  with Linkedin</a>
         </div>
-        <p class="mb-4 align-content-center  justify-content-center">Not account? <a href="#" class="text-primary">Create
-          One</a></p>
-        <small class=" justify-content-center">Click "Sign Up" to agree to CodyTec's Terms of Service and acknowledge
+        <p
+          class="mb-4 align-content-center  justify-content-center">{{type === AuthType.LOGIN ? 'Not account' : 'Already have an account' }}
+          ? <a (click)="type= type === AuthType.LOGIN ? AuthType.REGISTER : AuthType.LOGIN" class="text-primary" >{{type === AuthType.LOGIN ? 'Create One' : 'Sign in' }}
+          </a></p>
+        <small class=" justify-content-center">Click "Sign {{type === AuthType.LOGIN ? 'in' : 'up' }} " to agree to
+          CodyTec's Terms of Service and acknowledge
           that Medium’s Privacy Policy applies to you.</small>
       </div>
     </div>

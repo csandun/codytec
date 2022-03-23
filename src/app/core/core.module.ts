@@ -6,6 +6,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {SharedModule} from "../shared/shared.module";
+import {ModalModule} from "ngx-bootstrap/modal";
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -14,6 +16,7 @@ import {SharedModule} from "../shared/shared.module";
     FooterComponent,
     HeaderComponent,
     NavBarComponent,
+    LoginComponent,
   ],
   exports: [
     FooterComponent,
@@ -23,7 +26,8 @@ import {SharedModule} from "../shared/shared.module";
     CommonModule,
     RouterModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ModalModule.forRoot()
   ]
 })
 export class CoreModule { }
